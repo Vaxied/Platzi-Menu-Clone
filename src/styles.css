@@ -1,0 +1,299 @@
+:root {
+    --sm: 12px;
+    --md: 14px;
+    --lg: 16px;
+    --primary-color: #24385b;
+    --accent-color: #121f3d;
+    --header-color: #8ea9c1;
+    --number-color: #988f81;
+    --primary-text: #d0deeb;
+    --nav-height: 40px;
+    --scrollbar-thumb-color: #4e617d;
+    --scrollbar-track-color: #202324;
+    --amount-color: #988f81;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+#main-container {
+    height: calc(100% - var(--nav-height));
+    width: 100%;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border: none;
+    color: #d0deeb;
+    padding: 8px;
+    font-weight: 700;
+    font-size: var(--lg);
+}
+
+.menu-button:hover {
+    color: #e9eef3;
+}
+
+.menu-button .button-text {
+    padding-right: 8px;
+}
+
+div.show {
+    display: block;
+}
+
+.menu-button .arrow-img {
+    display: block;
+    height: 15px;
+    transform: rotate(90deg);
+}
+
+.categories-container {
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+.categories-container,
+.schools-container {
+    background-color: var(--primary-color);
+}
+
+.categories-container,
+.schools-container,
+.routes-container {
+    display: none;
+    height: 472px;
+    width: 323px;
+    position: absolute;
+}
+
+.categories-container {
+    left: 100px;
+}
+
+.schools-container,
+.routes-container {
+    left: 100%;
+}
+
+.categories-title,
+.schools-header,
+.routes-header {
+    padding: 20px 12px;
+}
+
+.categories-header,
+.schools-header,
+.routes-header {
+    display: flex;
+    align-items: center;
+}
+
+.categories-title,
+.schools-title,
+.schools-amount,
+.routes-title,
+.routes-amount {
+    color: var(--header-color);
+    font-size: var(--sm);
+    font-weight: bold;
+}
+
+.schools-amount,
+.routes-amount {
+    color: var(--amount-color);
+    font-weight: 100;
+}
+
+.categories,
+.schools {
+    position: relative;
+}
+
+.categories,
+.schools,
+.routes {
+    padding-bottom: 15px;
+    list-style-type: none;
+}
+
+.categories-option,
+.schools-option,
+.routes-option {
+    padding: 0 15px;
+}
+
+.categories-text,
+.schools-link,
+.routes-link {
+    display: flex;
+    align-items: center;
+    color: var(--primary-text);
+    border-radius: 10px;
+    font-size: var(--md);
+    border-radius: 5px;
+    padding: 12px 16px;
+    font-weight: bold;
+}
+
+#all-courses {
+    cursor: pointer;
+}
+
+.schools-container,
+.routes-container {
+    display: block;
+}
+
+.schools-link,
+.routes-link {
+    text-decoration: none;
+}
+
+.categories-link p {
+    flex-grow: 1;
+}
+
+.categories-option:hover .categories-text,
+.schools-option:hover .schools-link,
+.routes-option:hover .routes-link {
+    background-color: var(--accent-color);
+}
+
+.categories-option:hover .categories-link .arrow-img,
+.schools-option:hover .schools-link .arrow-img {
+    display: block;
+}
+
+.categories-option:hover .schools-container {
+    display: block;
+}
+
+.categories-1 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_development_3d3b4073cf.png);
+}
+
+.categories-2 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_english_b477187ffa.png);
+}
+
+.categories-3 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_marketing_6098510d4e.png);
+}
+
+.categories-4 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_soft_351e5c0f90.png);
+}
+
+.categories-5 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_business_fa22370a52.png);
+}
+
+.categories-6 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_startups_225d812cd7.png);
+}
+
+.categories-7 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_design_ba39a0c9e2.png);
+}
+
+.categories-8 .schools-container {
+    background-image: url(https://static.platzi.com/media/uploads/school_graphic_digital_content_340586f6c7.png);
+}
+
+.schools-container {
+    background-size: 570px;
+    background-repeat: no-repeat;
+    background-position: 70px 110px;
+}
+
+.schools-container,
+.routes-container {
+    top: -58px;
+    border-left: var(--scrollbar-thumb-color) 1px solid;
+    display: none;
+}
+
+.schools-option:hover .routes-container {
+    display: block;
+}
+
+.schools-title,
+.routes-title {
+    padding-right: 5px;
+}
+
+.schools-link {
+    justify-content: space-between;
+}
+
+.categories-container .arrow-img,
+.schools-container .arrow-img {
+    /* height: 15px; */
+    display: none;
+    filter: grayscale(50%);
+}
+
+.arrow-img {
+    height: 12px;
+}
+
+/* .categories-1 .arrow-img {
+    display: block;
+} */
+
+.routes-container {
+    overflow-y: scroll;
+    background-color: var(--accent-color);
+}
+
+.routes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.routes-container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 5px;
+}
+
+.routes-container::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+}
+
+.routes-container .routes-link:hover {
+    background-color: var(--primary-color);
+}
+
+.icon-svg {
+    padding-right: 8px;
+    width: 24px;
+}
